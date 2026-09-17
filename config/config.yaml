@@ -1,0 +1,11 @@
+seed: 42
+paths:
+  raw_bgl: data/raw/BGL
+  raw_hdfs: data/raw/HDFS
+  processed: data/processed
+  attacks: data/attacks
+  results: results
+preprocessing:
+  bgl_window_minutes: [1, 5, 10]
+attacks:
+  intensities: [1, 2, 3, 4, 5]

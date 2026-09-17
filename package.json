@@ -1,0 +1,7 @@
+{
+  "name": "audit-reproducibility-project",
+  "private": true,
+  "scripts": {
+    "test:contracts": "npm --prefix contracts test"
+  }
+}
