@@ -1,0 +1,82 @@
+{
+  "cryptographic": {
+    "detection_rate_modification": 1.0,
+    "detection_rate_suppression": 1.0,
+    "detection_rate_injection": 1.0,
+    "detection_rate_reordering": 1.0,
+    "hash_generation_ms": 11.830199975520372,
+    "merkle_construction_ms": 2.513299696147442,
+    "proof_generation_ms": 0.048900023102760315,
+    "proof_verification_ms": 0.0525997020304203,
+    "average_merkle_proof_bytes": 899.7
+  },
+  "ai": {
+    "status": "OK",
+    "accuracy": 0.6896130657101427,
+    "precision": 0.8907934034540969,
+    "recall": 0.48470288984667564,
+    "f1_score": 0.6278026905829597,
+    "auroc": 0.7175666103035389,
+    "auprc": 0.7761041352104281,
+    "false_positive_rate": 0.0697751597112752,
+    "false_negative_rate": 0.5152971101533244,
+    "threshold": 0.5,
+    "n_samples": 26206,
+    "recall_by_attack_type": {
+      "injection_anormaux": 1.0,
+      "injection_normaux": 1.0,
+      "injection_timestamp_plausible": 1.0,
+      "modification_contenu": 1.0,
+      "modification_niveau": 0.15799432355723747,
+      "modification_sourceid": 0.09980988593155894,
+      "modification_timestamp": 0.7428833792470156,
+      "reordonnancement_deplacement_critique": 0.7427272727272727,
+      "reordonnancement_inversion_fenetre": 0.07624890446976336,
+      "reordonnancement_permutation": 0.0889908256880734,
+      "replay_ancienne_sequence": 0.06749049429657794,
+      "replay_bloc_deja_vu": 0.07245080500894455,
+      "rollback_lot_recent": 0.2533814247069432,
+      "unknown": null
+    },
+    "detection_delay_seconds_mean": null,
+    "detection_delay_samples": 0
+  },
+  "blockchain_performance": {
+    "status": "OK",
+    "scenarios": [
+      {
+        "batch_size_or_delta_minutes": 1,
+        "gas_per_anchor": 368750.3,
+        "gas_total": 10325008.0,
+        "anchoring_latency_seconds_mean": 0.0229,
+        "logs_per_second": 7814.971089232693,
+        "offchain_storage_bytes": null,
+        "onchain_storage_bytes_total": 8540.0,
+        "transaction_count": 28,
+        "average_logs_per_batch": 178.6
+      },
+      {
+        "batch_size_or_delta_minutes": 5,
+        "gas_per_anchor": 365645.0,
+        "gas_total": 2925160.0,
+        "anchoring_latency_seconds_mean": 0.0212,
+        "logs_per_second": 29481.132075471698,
+        "offchain_storage_bytes": null,
+        "onchain_storage_bytes_total": 2440.0,
+        "transaction_count": 8,
+        "average_logs_per_batch": 625.0
+      },
+      {
+        "batch_size_or_delta_minutes": 10,
+        "gas_per_anchor": 368134.0,
+        "gas_total": 1472536.0,
+        "anchoring_latency_seconds_mean": 0.0216,
+        "logs_per_second": 57803.46820809249,
+        "offchain_storage_bytes": null,
+        "onchain_storage_bytes_total": 1220.0,
+        "transaction_count": 4,
+        "average_logs_per_batch": 1250.0
+      }
+    ]
+  }
+}

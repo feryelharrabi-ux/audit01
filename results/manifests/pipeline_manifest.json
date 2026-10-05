@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-10-05T20:55:46.507763+00:00",
+  "status": "complete",
+  "ai_model": "pred_TF-IDF+LR",
+  "threshold": 0.5,
+  "inputs": {
+    "data\\processed\\sample_logs.csv": "7f9102554bbeb57673cafa6e80284d0671d63c897f4f75448bad0444be49e925",
+    "data\\processed\\cost_report_summary.csv": "bd1116b76f26dd6b0bea4f72e27a66462d0951d34faa4de205b63e82c1b91f30",
+    "data\\processed\\ai_results.xlsx": "9975f1c9814ee2b102a38d4453c7d37a39c52848f40afb52ba55bbbb11ff24d8"
+  },
+  "outputs": {
+    "results\\figures\\I1_detection_crypto.png": "b528403874543d066ff3be73ee786c83f9d648d8a39b0160b7579edd9db16a17",
+    "results\\figures\\I2_metriques_ia.png": "82588320fdd17101acb7f449b75d729de5ef6ac076f241ff0fe641baba39e64f",
+    "results\\figures\\I3_fpr_fnr.png": "b966c1aec40ba52105a3df4a09bddad5770dcc1c4a5d8e6cece282bb246777f8",
+    "results\\figures\\I4_timing_crypto.png": "035b327d42f879401bf95ce3e5bd1b8a8852a701331ceb9c31b7ca4742bfa94a",
+    "results\\figures\\I5_gas_strategies.png": "15587cc7e73112ba36d2210957a81a447a15f4b693789bfc6fbbe34669307b69",
+    "results\\tables\\metrics_recalculated.csv": "f637cb5034315b18ab7309e8c0ed68d2bd0f8da20910da33f4a5def98ca5ef9e",
+    "results\\tables\\metrics_report.json": "63d5d21fc5f986efbd13182b30fc639c9ef930cf35f9bc8d3f5bbe9bdb4886ac",
+    "results\\tables\\metrics_summary.csv": "f182f093e4ebdfe2c744891aae59dbac0550583f77bb4973f31135857c757977"
+  }
+}

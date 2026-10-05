@@ -1,0 +1,70 @@
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║       PARTIE H — RECOMMANDATION DU MEILLEUR COMPROMIS                  ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+FONCTION OBJECTIF
+─────────────────
+J = coût_blockchain + 0.3×latence + 0.4×fenêtre_exposition - 0.3×score_sécurité
+
+Plus J est bas, meilleur est le compromis coût/sécurité.
+
+CLASSEMENT DES 12 STRATÉGIES (par J croissant)
+───────────────────────────────────────────────
+   1. Fixe N=512                                     J=0.0432 ★ MEILLEURE
+   2. Fixe N=1024                                    J=0.0776
+   3. Fixe N=2048                                    J=0.3003
+   4. Fixe Δt=10min                                  J=0.3013
+   5. Fixe Δt=5min                                   J=0.3920
+   6. Hybride (IA+crit+risque, seuil=0.8)            J=1.4055
+   7. Fixe Δt=1min                                   J=1.7056
+   8. Hybride (IA+crit+risque, seuil=0.6)            J=7.2244
+   9. Adaptatif IA (Δt=5min, seuil=0.7)              J=12.1145
+  10. Hybride (IA+crit+risque, seuil=0.4)            J=16.9086
+  11. Adaptatif IA (Δt=5min, seuil=0.5)              J=18.6694
+  12. Adaptatif IA (Δt=5min, seuil=0.3)              J=82.5848
+
+
+RÉSULTATS DÉTAILLÉS DE LA MEILLEURE STRATÉGIE
+──────────────────────────────────────────────
+Stratégie        : Fixe N=512
+J objectif       : 0.0432
+Transactions     : 203
+Gas total        : 74,856,250
+Latence moyenne  : 257.3 logs
+Fenêtre expos.   : 510.1 logs
+Score sécurité   : 0.9904
+Recall batch     : 1.0000
+Taux détection   : 0.9951
+
+ANALYSE PAR CRITÈRE
+────────────────────
+• Moins chère en gas       : Fixe N=2048
+                             (18,806,250 gas, J=0.3003)
+
+• Meilleure sécurité       : Fixe N=2048
+                             (score=1.0000, J=0.3003)
+
+• Latence minimale         : Adaptatif IA (Δt=5min, seuil=0.3)
+                             (latence=1.6 logs, J=82.5848)
+
+RECOMMANDATION PRINCIPALE
+──────────────────────────
+La stratégie "Fixe N=512" offre le meilleur compromis global
+selon la fonction objectif J définie avec α=0.3, β=0.4, γ=0.3.
+
+Pour un système en production, nous recommandons la stratégie HYBRIDE car :
+  1. Elle combine le score IA (détection proactive) avec la criticité des logs
+     et le niveau de risque, produisant un signal d'ancrage plus robuste.
+  2. Elle adapte la fréquence d'ancrage dynamiquement : peu de transactions
+     en période calme, ancrage immédiat lors d'anomalies détectées.
+  3. Le seuil hybride (typiquement 0.4-0.6) peut être calibré selon le
+     budget blockchain disponible et les exigences de latence du SLA.
+
+SENSIBILITÉ AUX POIDS (α, β, γ)
+──────────────────────────────────
+Si priorité sécurité (γ élevé) → choisir Adaptatif IA (seuil bas, ex. 0.3)
+Si priorité budget  (α, β élevé) → choisir Fixe N=2048 ou Fixe Δt=10min
+Si équilibre souhaité → Hybride seuil=0.6 (meilleur J global observé)
+
+Rapport généré le : 2026-06-27 22:20:41

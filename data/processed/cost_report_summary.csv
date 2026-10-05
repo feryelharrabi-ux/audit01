@@ -1,0 +1,4 @@
+delta_t_minutes,n_batches,n_transactions,gas_total,gas_moyen_par_tx,gas_min,gas_max,temps_moyen_ancrage_s,temps_total_ancrage_s,taille_onchain_moyenne_octets,taille_onchain_totale_octets,logs_par_batch_moyen
+1,28,28,10325008,368750.3,368110,385222,0.0229,0.6399,305.0,8540,178.6
+5,8,8,2925160,365645.0,348234,368146,0.0212,0.1696,305.0,2440,625.0
+10,4,4,1472536,368134.0,368122,368146,0.0216,0.0865,305.0,1220,1250.0

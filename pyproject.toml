@@ -12,6 +12,10 @@ dependencies = [
   "pandas",
   "scikit-learn",
   "pyyaml",
+  "matplotlib",
+  "openpyxl",
+  "xlsxwriter",
+  "cryptography",
 ]
 
 [tool.pytest.ini_options]
